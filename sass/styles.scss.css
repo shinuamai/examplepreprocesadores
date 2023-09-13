@@ -1,0 +1,72 @@
+body {
+  padding: 15px;
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  align-items: center;
+}
+body .box {
+  background-color: blue;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+}
+body .container {
+  width: 100%;
+  margin: 0 auto;
+}
+body .container .box {
+  margin-top: 20px;
+}
+body .button {
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #c997c6;
+  border: 1px solid #c997c6;
+  color: white;
+  padding: 10px;
+}
+body .error-message, body .success-message {
+  border-radius: 3px;
+  margin-top: 10px;
+  width: fit-content;
+  display: none;
+  border: 1px solid #ce5449;
+  color: #ce5449;
+  padding: 5px;
+}
+body .success-message {
+  border-color: #42784c;
+  color: #42784c;
+}
+body .newbutton {
+  border-radius: 3px;
+  display: inline-flex;
+  position: relative;
+  border: none;
+  vertical-align: middle;
+  margin-top: 10px;
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+}
+body .newbutton:hover {
+  background-color: coral;
+  cursor: pointer;
+}
+body .newbutton-light {
+  display: inline-flex;
+  position: relative;
+  border: none;
+  vertical-align: middle;
+  margin-top: 10px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
+body .newbutton-light:hover {
+  background-color: coral;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.scss.css.map */

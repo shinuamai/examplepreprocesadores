@@ -1,0 +1,91 @@
+// 1. Sintaxis Sas
+$primary-color: #6a9eda;
+$second-color: #ce5449;
+$third-color: #42784c;
+$fourth-color: #c997c6;
+
+body {
+    padding: 15px;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    align-items: center;
+    .box {
+        background-color: $primary-color;
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        cursor: pointer;
+
+        // 2. Variables
+    }
+
+    // 3. Anidación
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+        .box {
+            margin-top: 20px;
+        }
+    }
+
+    // 4. Mixins
+    @mixin rounded-corners($radius) {
+        border-radius: $radius;
+    }
+
+    .button {
+        @include rounded-corners(5px);
+        margin-top: 10px;
+        background-color: $fourth-color;
+        border: 1px solid $fourth-color;
+        color: white;
+        padding: 10px;
+    }
+
+    // 5. Herencia
+    .error-message {
+        @include rounded-corners(3px);
+        margin-top: 10px;
+        width: fit-content;
+        display: none;
+        border: 1px solid $second-color;
+        color: $second-color;
+        padding: 5px;
+    }
+
+    .success-message {
+        @extend .error-message;
+        border-color: $third-color;
+        color: $third-color;
+    }
+
+    //Ejemplo de mixin boton con selector & 
+    @mixin button-base() {
+        display: inline-flex;
+        position: relative;
+        border: none;
+        vertical-align: middle;
+        margin-top: 10px;
+        &:hover {
+          background-color: coral;
+          cursor: pointer;
+        }
+    
+    }
+    
+    .newbutton {
+        @include rounded-corners(3px);
+        @include button-base(); 
+        background-color: #000000;
+        color: white;
+        padding: 10px;
+        &-light {
+            @include button-base();
+            @include rounded-corners(3px);
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+        }
+    }
+
+}
