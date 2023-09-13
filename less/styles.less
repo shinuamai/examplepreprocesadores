@@ -1,0 +1,85 @@
+@primary-color: #6a9eda;
+@second-color: #ce5449;
+@third-color: #42784c;
+@fourth-color: #c997c6;
+
+body {
+    padding: 15px;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    align-items: center;
+
+    .box {
+        background-color: @primary-color;
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+        .box {
+            margin-top: 20px;
+        }
+    }
+
+    .rounded-corners(@radius) {
+        border-radius: @radius;
+    }
+
+    .button {
+        .rounded-corners(5px);
+        margin-top: 10px;
+        background-color: @fourth-color;
+        border: 1px solid @fourth-color;
+        color: white;
+        padding: 10px;
+    }
+
+    .error-message {
+        margin-top: 10px;
+        width: fit-content;
+        display: none;
+        border: 1px solid @second-color;
+        color: @second-color;
+        padding: 5px;
+    }
+
+    .success-message {
+        .error-message;
+        border-color: @third-color;
+        color: @third-color;
+    }
+
+    // Ejemplo de mixin
+    .button-base() {
+        display: inline-flex;
+        position: relative;
+        border: none;
+        vertical-align: middle;
+        margin-top: 10px;
+        
+        &:hover {
+            background-color: coral;
+            cursor: pointer;
+        }
+    }
+
+    .newbutton {
+        .button-base();
+        .rounded-corners(3px);
+        background-color: #000000;
+        color: white;
+        padding: 10px;
+
+        &-light {
+            .button-base();
+            .rounded-corners(3px);
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+        }
+    }
+}
