@@ -1,0 +1,67 @@
+// 1. Sintaxis Concisa: Stylus utiliza una sintaxis aún más concisa que SASS y Less,
+//    eliminando la necesidad de llaves y puntos y comas en muchas ocasiones.
+
+primary-color = #6a9eda
+second-color = #ce5449
+third-color = #42784c
+fourth-color = #c997c6
+
+body
+    padding: 15px
+    font-family: "Source Sans Pro", "Arial", sans-serif
+    align-items: center
+
+.box
+    background-color primary-color
+    border-radius: 10px
+    color white
+    padding 20px
+    cursor pointer
+
+    // 2. Flexibilidad: Stylus es altamente configurable y permite definir tu propia sintaxis personalizada si lo deseas.
+    &-text
+        font-size 18px
+        text-align center
+
+// 3. Mixins Avanzados: Stylus admite mixins más avanzados que pueden ser más potentes que los de SASS y Less.
+rounded-corners(radius)
+    border-radius radius
+
+.button
+    rounded-corners(5px)
+    margin-top: 10px;
+    background-color: fourth-color
+    border: 1px solid fourth-color
+    color white
+    padding 10px
+
+// 4. Sintaxis Funcional: Stylus permite operaciones matemáticas y funciones,
+//    lo que lo hace versátil para tareas más complejas.
+container-width = 800px
+margin-sides = 20px
+
+.container
+    width container-width
+    margin margin-sides
+
+.error-message
+    rounded-corners(5px)
+    margin-top: 10px
+    width: fit-content
+    display: none
+    border: 1px solid second-color
+    color: second-color
+    padding: 5px
+
+.success-message
+    @extend .error-message
+    border-color: third-color
+    color: third-color
+// 5. Currying: Stylus permite currying, que es una técnica donde puedes parcialmente aplicar funciones,
+//    lo que puede ser útil en ciertos casos.
+padding-top = 10px
+
+.box-with-padding
+    padding-top(padding-top)
+    background-color third-color
+    color white

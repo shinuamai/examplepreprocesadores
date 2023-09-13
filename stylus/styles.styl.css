@@ -1,0 +1,46 @@
+body {
+  padding: 15px;
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  align-items: center;
+}
+.box {
+  background-color: #6a9eda;
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+}
+.box-text {
+  font-size: 18px;
+  text-align: center;
+}
+.button {
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #c997c6;
+  border: 1px solid #c997c6;
+  color: #fff;
+  padding: 10px;
+}
+.container {
+  width: 800px;
+  margin: 20px;
+}
+.error-message,
+.success-message {
+  border-radius: 5px;
+  margin-top: 10px;
+  width: fit-content;
+  display: none;
+  border: 1px solid #ce5449;
+  color: #ce5449;
+  padding: 5px;
+}
+.success-message {
+  border-color: #42784c;
+  color: #42784c;
+}
+.box-with-padding {
+  background-color: #42784c;
+  color: #fff;
+}
